@@ -1,0 +1,14 @@
+#watch{
+    width:300px;
+    background-color: red;
+    text-align: center;
+    margin:100px;
+    padding: 50px;
+}
+span{
+    align-content: center;
+    text-align: center;
+}
+button{
+    align-items: center;
+}
