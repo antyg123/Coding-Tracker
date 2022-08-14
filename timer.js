@@ -1,17 +1,6 @@
-
-//function start(){
-  //  setInterval(increaseNumber, 1000);
-    //function increaseNumber(){
-      //  let number = parseInt(document.getElementById('time').innerText);
-        //while(number<10){
-          //  number++;
-        //}
-    //}
-//}
-
 function start(){
-  const number = setInterval(printX, 1000);
-  x=0
+  const increaseNumber = setInterval(printX, 1000);
+  let x = Number(document.getElementById("time")).value
   function printX(x){ //this function will execute every second
     if (x<10){
       console.log(x);
@@ -22,6 +11,10 @@ function start(){
     }}
 }}
 
+let up = 1;
+function change(seconds, up){
+  Number(document.getElementById("seconds").innerHTML) = up;}
+change("seconds", up);
 
 //create a funtion that upon clicking, will count up to ten.
 //VARIABLES:
