@@ -8,14 +8,18 @@
         //}
     //}
 //}
-const number = setInterval(printX, 1000);
-while (x<10){
-    function printX(x){
-        x=0;
-        while(x<10){
-            console.log(x);
-            x++;
-    }
+
+function start(){
+  const number = setInterval(printX, 1000);
+  x=0
+  function printX(x){ //this function will execute every second
+    if (x<10){
+      console.log(x);
+      x++;
+        if(x>10){
+          console.log("done")
+          clearInterval();
+    }}
 }}
 
 
