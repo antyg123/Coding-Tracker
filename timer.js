@@ -4,19 +4,33 @@ var hours = 0;
 var appendSeconds = document.getElementById("seconds");
 var appendMinutes = document.getElementById("minutes");
 var appendHours = document.getElementById("hours");
+var totalTime = 0;
+var appendTotalTime = document.getElementById("totalTime");
 
 function start(){
   increaseNumber = setInterval(printX, 1000);
-  function printX(){ //this function will execute every second
-    while (seconds<=10){
-      appendSeconds.innerText = seconds;
+  //this function will execute every second
+  function printX(){
+    
+    if (seconds<59){
       seconds++;
-      if(seconds==10){
+      appendSeconds.innerText = seconds;
+      }
+    
+      else if (seconds>=59){
         seconds = 0;
-        minutes+1;
+        appendSeconds.innerText = seconds;
+        minutes++;
         appendMinutes.innerText = minutes;}
-        
-}}}
+    
+    if (minutes==60){
+      minutes = 0;
+      appendMinutes.innerText = minutes;
+      hours++;
+      appendHours.innerText = hours;}
+  }
+  }
+
 
 function stop(){
   clearInterval(increaseNumber);
@@ -30,6 +44,11 @@ function reset(){
   appendMinutes.innerText = "0";
   appendHours.innerText = "0";
   
+}
+
+function save(){
+  totalTime = seconds + minutes + hours;
+  appendTotalTime.innerText = totalTime;
 }
 /*
 function start(){
