@@ -13,18 +13,20 @@
         <link rel="stylesheet" href="timer.css">
     </head>
     <body>
+        <div class="form">
+  
+        </div>
         <div id="watch">
-            <span id="seconds">0</span>
-            <span id="minutes">0</span>
             <span id="hours">0</span>
-            
+            <span id="minutes">0</span>
+            <span id="seconds">0</span>
             <br>
             <button id="start" onclick="start();">Start</button>
             <button id="stop" onclick="stop();">Stop</button>
             <button id="save" onclick="save();">Save</button>
             <button id="reset" onclick="reset();">Reset</button>
             <p>total hours: </p>
-            <p id="totalHours">0</p>
+            <p id="totalTime">0</p>
         </div>
         
         <script src="timer.js" async defer></script>
