@@ -13,21 +13,27 @@
         <link rel="stylesheet" href="timer.css">
     </head>
     <body>
-        <div class="form">
-  
-        </div>
-        <div id="watch">
-            <span id="hours">0</span>
-            <span id="minutes">0</span>
-            <span id="seconds">0</span>
-            <br>
-            <button id="start" onclick="start();">Start</button>
-            <button id="stop" onclick="stop();">Stop</button>
-            <button id="save" onclick="save();">Save</button>
-            <button id="reset" onclick="reset();">Reset</button>
-            <p>total hours: </p>
-            <p id="totalTime">0</p>
-        </div>
+        
+<div id ="form">
+  <form id = "formContainer">
+    <h1>Tasks Accomplished</h1>
+    <label for="tasks">Tasks: </label>
+    <input id="tasks" type = "text" placeholder="type something" name="tasks" size="55">
+    <button id="submitInfo"type="submit" for="tasks" name="submit">Submit</button>
+  </form>  
+</div>
+<div id="watch">
+  <span id="hours">0</span>
+  <span id="minutes">0</span>
+  <span id="seconds">0</span>
+  <br>
+  <button id="start" onclick="start();">Start</button>
+  <button id="stop" onclick="stop();">Stop</button>
+  <button id="save" onclick="save();">Save</button>
+  <button id="reset" onclick="reset();">Reset</button>
+  <p>total hours: </p>
+  <p id="totalTime">0</p>
+ </div>
         
         <script src="timer.js" async defer></script>
     </body>
